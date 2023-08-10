@@ -111,4 +111,8 @@
         row-gap: 0.4rem;
         column-gap: 1rem;
     }
+
+    .characters > .character-list > .character:not(:last-child) {
+        padding-bottom: 1rem;
+    }
 }
