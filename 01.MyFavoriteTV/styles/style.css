@@ -1,0 +1,345 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: serif;
+    text-align: justify;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding-bottom: 2rem;
+}
+
+
+
+
+/* Header */
+
+.header-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(230, 244, 255);
+}
+
+.header-wrapper > .header-wrapper-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 0.4rem;
+
+    padding: 2rem 1rem;
+}
+
+.header-wrapper > .header-wrapper-inner > .title {
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.header-wrapper > .header-wrapper-inner > .description {
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: 400;
+    margin: 0;
+    color: rgb(98, 102, 117);
+}
+
+.header-wrapper > .header-wrapper-inner > .backdrops {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    column-gap: 1rem;
+    overflow-x: scroll;
+}
+
+.header-wrapper > .header-wrapper-inner > .backdrops > .backdrop {
+    border-radius: 8px;
+    height: 12rem;
+}
+
+
+
+
+/* Main */
+.main-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 1rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 1.6rem;
+    padding: 1rem;
+}
+
+.card > .card-title-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+    border-left: 0.5rem solid #003eb3;
+    padding-left: 0.5rem;
+}
+
+.card > .card-title-wrapper > .card-title {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0;
+}
+
+.card > .card-title-wrapper > .decoration-line {
+    flex-grow: 1;
+    background: #eee;
+    height: 1px;
+    margin-left: 0.4rem;
+    margin-right: -1rem;
+}
+
+.card > .metadata {
+    width: 100%;
+}
+
+
+
+
+
+/* overview */
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    row-gap: 1rem;
+}
+
+.overview > .text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    row-gap: 1rem;
+}
+
+.overview > .text > .statistics {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 0.6rem;
+    
+    font-size: 0.8rem;
+    margin-top: 0.4rem;
+}
+
+.overview > .text > .statistics > .item > .key {
+    color: rgb(81, 156, 234);
+}
+
+.overview > .text > .statistics > .item > .value {
+    color: rgb(136, 136, 136);
+    font-size: 0.75rem;
+}
+
+.overview > .text > .statistics > .item:not(:last-child) {
+    padding-right: 0.6rem;
+    border-right: 1px solid #eee;
+}
+
+.overview > .text > .intro > .intro-text {
+    line-height: 1.4rem;
+    text-indent: 2rem;
+    font-size: 0.875rem;
+    margin: 0;
+}
+
+.overview > .text > .metadata {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 0.4rem;
+}
+
+.overview > .text > .metadata > .item {
+    /* Responsive */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    font-size: 0.875rem;
+}
+
+.overview > .text > .metadata > .item > .key {
+    flex-basis: 25%;
+}
+
+.overview > .text > .metadata > .item > .value {
+    flex-basis: 75%;
+    color: rgb(116, 116, 116);
+}
+
+.overview > .image {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.overview > .image > .poster {
+    width: 70%;
+    height: auto;
+}
+
+
+
+
+/* basic-info */
+.basic-info {
+    width: 100%;
+}
+
+.basic-info > .metadata {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    row-gap: 0.6rem;
+}
+
+.basic-info > .metadata > .item {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    padding-bottom: 0.4rem;
+    border-bottom: 1px dotted #ccc;
+
+    font-size: 0.875rem;
+}
+
+.basic-info > .metadata > .item > .key {
+    color: #999;
+    font-weight: bold;
+    min-width: 4.4rem;
+    flex-basis: 15%;
+}
+
+.basic-info > .metadata > .item > .value {
+    padding-right: 0.6rem;
+}
+
+
+
+
+/* characters */
+
+.characters > .character-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-start;
+
+    row-gap: 1rem;
+}
+
+.characters > .character-list > .character {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    row-gap: 0.4rem;
+}
+
+.characters > .character-list > .character:not(:last-child) {
+    width: 100%;
+    padding-bottom: 0.4rem;
+    border-bottom: #eee solid 1px;
+}
+
+.characters > .character-list > .character > .profile {
+    width: 40%;
+    height: auto;
+}
+
+.characters > .character-list > .character > .text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    row-gap: 0.4rem;
+}
+
+.characters > .character-list > .character > .text > .character-name {
+    margin: 0.2rem 0;
+    color: rgb(0, 62, 179);
+    font-size: 1rem;
+}
+
+.characters > .character-list > .character > .text >  .cast-name-wrapper > .key {
+    color: rgb(153, 153, 153);
+    font-size: 0.875rem;
+}
+
+.characters > .character-list > .character > .text >  .cast-name-wrapper > .value {
+    font-size: 0.875rem;
+}
+
+.characters > .character-list > .character > .text >  .character-intro {
+    line-height: 1.4rem;
+    font-size: 0.875rem;
+}

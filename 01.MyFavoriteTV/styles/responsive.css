@@ -1,0 +1,114 @@
+@media screen and (min-width: 800px) {
+
+    body {
+        background-color: rgb(245, 245, 245);
+    }
+
+    /* Header */
+
+    .header-wrapper > .header-wrapper-inner {
+        min-width: 800px;
+        width: 70%;
+        padding: 2rem 0;
+    }
+
+    .header-wrapper > .header-wrapper-inner > .title {
+        margin: 0.2rem 0;
+    }
+
+    .header-wrapper > .header-wrapper-inner > .backdrops {
+        overflow-x: hidden;
+    }
+
+    .header-wrapper > .header-wrapper-inner > .backdrops > .backdrop {
+        height: unset;
+        width: calc((100% - 2rem) / 3);
+    }
+
+    /* card */
+
+    .card {
+        min-width: 800px;
+        width: 70%;
+        background-color: #fff;
+        border: solid 1px #E5E5E5;
+
+        padding: 2rem 1rem;
+        box-shadow: 0 2px 3px -2px #d5d5d5;
+    }
+
+    .card > .card-title-wrapper {
+        margin-left: -2rem;
+    }
+
+    /* overview */
+
+    .overview {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: center;
+    
+        column-gap: 1rem;
+    }
+
+    .overview > .text {
+        flex-basis: 75%;
+    }
+
+    .overview > .text > .statistics {
+        margin-top: 0;
+    }
+
+    .overview > .image {
+        flex-basis: 25%;
+    }
+
+    .overview > .image > .poster {
+        width: 100%;
+    }
+
+    .overview > .text > .metadata {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 0.8rem;
+        margin: 1rem 0;
+    }
+
+    .overview > .text > .metadata > .item{
+        flex-basis: 50%;
+    }
+
+    /* basic-info */
+    
+    .basic-info > .metadata {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        row-gap: 0.6rem;
+    }
+
+    .basic-info > .metadata > .item {
+        flex-basis: 50%;
+    }
+
+    /* characters */
+
+    .characters > .character-list > .character > .profile {
+        width: 8rem;
+        height: auto;
+    }
+
+    .characters > .character-list > .character {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+    
+        row-gap: 0.4rem;
+        column-gap: 1rem;
+    }
+}
