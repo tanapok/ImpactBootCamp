@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>喜西茶预定</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index-responsive.css">
+    <link rel="stylesheet" href="css/back-to-top.css">
+</head>
+<body>
+    <div class="container">
+        <header class="specials-wrapper">
+            <div class="specials">
+                <img src="img/mt1.jpg" alt="Milk Tea One">
+                <img src="img/mt2.jpg" alt="Milk Tea Two">
+                <img src="img/mt3.jpg" alt="Milk Tea Three">
+                <img src="img/mt4.jpg" alt="Milk Tea Four">
+            </div>
+        </header>
+        <main class="order-wrapper">
+            <form action="" class="order" id="order-form">
+                <fieldset class="item">
+                    <p class="name">奶茶口味</p>
+                    <div class="choices data">
+                        <div class="choice">
+                            <input type="radio" name="flavour" id="芋泥波波" value="芋泥波波" required checked>
+                            <label for="芋泥波波">芋泥波波</label>
+                        </div>
+                        <div class="choice">
+                            <input type="radio" name="flavour" id="芝芝桃桃" value="芝芝桃桃" required>
+                            <label for="芝芝桃桃">芝芝桃桃</label>
+                        </div>
+                        <div class="choice">
+                            <input type="radio" name="flavour" id="多肉葡萄" value="多肉葡萄" required>
+                            <label for="多肉葡萄">多肉葡萄</label>
+                        </div>
+                        <div class="choice">
+                            <input type="radio" name="flavour" id="橙子多多" value="橙子多多" required>
+                            <label for="橙子多多">橙子多多</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="item">
+                    <p class="name">几杯</p>
+                    <input class="data" type="number" name="quantity" id="quantity" min="1" max="100" required>
+                </fieldset>
+                <fieldset class="item">
+                    <p class="name">杯型</p>
+                    <div class="choices data">
+                        <div class="choice">
+                            <input type="radio" name="cup-type" id="小杯" value="小杯" checked required>
+                            <label for="小杯">小杯</label>
+                        </div>
+                        <div class="choice">
+                            <input type="radio" name="cup-type" id="中杯" value="中杯" required>
+                            <label for="中杯">中杯</label>
+                        </div>
+                        <div class="choice">
+                            <input type="radio" name="cup-type" id="大杯" value="大杯" required>
+                            <label for="大杯">大杯</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="item">
+                    <p class="name">甜度</p>
+                    <select class="data" name="sweet-degree" id="sweet-degree">
+                        <option value="全糖">全糖</option>
+                        <option value="半糖">半糖</option>
+                        <option value="无糖">无糖</option>
+                    </select>
+                </fieldset>
+                <fieldset class="item">
+                    <p class="name">免费小料</p>
+                    <div class="choices data">
+                        <div class="choice">
+                            <input type="checkbox" name="free-ingredients" value="波霸" id="波霸">
+                            <label for="波霸">波霸</label>
+                        </div>
+                        <div class="choice">
+                            <input type="checkbox" name="free-ingredients" value="椰果" id="椰果">
+                            <label for="椰果">椰果</label>
+                        </div>
+                        <div class="choice">
+                            <input type="checkbox" name="free-ingredients" value="珍珠" id="珍珠">
+                            <label for="珍珠">珍珠</label>
+                        </div>
+                        <div class="choice">
+                            <input type="checkbox" name="free-ingredients" value="西米" id="西米">
+                            <label for="西米">西米</label>
+                        </div>
+                        <div class="choice">
+                            <input type="checkbox" name="free-ingredients" value="红豆" id="红豆">
+                            <label for="红豆">红豆</label>
+                        </div>
+                        <div class="choice">
+                            <input type="checkbox" name="free-ingredients" value="葡萄冻" id="葡萄冻">
+                            <label for="葡萄冻">葡萄冻</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="item">
+                    <p class="name">加价小料</p>
+                    <div class="choices data">
+                        <div class="choice">
+                            <input type="checkbox" name="paid-ingredients" value="冰淇淋" id="冰淇淋">
+                            <label for="冰淇淋">冰淇淋（¥4）</label>
+                        </div>
+                        <div class="choice">
+                            <input type="checkbox" name="paid-ingredients" value="布丁" id="布丁">
+                            <label for="布丁">布丁（¥3）</label>
+                        </div>
+                        <div class="choice">
+                            <input type="checkbox" name="paid-ingredients" value="奶霜" id="奶霜">
+                            <label for="奶霜">奶霜（¥2）</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="item">
+                    <p class="name">是否加冰</p>
+                    <div class="choices data">
+                        <div class="choice">
+                            <input type="radio" name="add-ice" value="是" id="加冰：是" checked required>
+                            <label for="加冰：是">是</label>
+                        </div>
+                        <div class="choice">
+                            <input type="radio" name="add-ice" value="否" id="加冰：否" required>
+                            <label for="加冰：否">否</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="item">
+                    <p class="name">是否去茶底</p>
+                    <div class="choices data">
+                        <div class="choice">
+                            <input type="radio" name="remove-tea" value="是" id="去茶底：是" required>
+                            <label for="去茶底：是">是</label>
+                        </div>
+                        <div class="choice">
+                            <input type="radio" name="remove-tea" value="否" id="去茶底：否" checked required>
+                            <label for="去茶底：否">否</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="item">
+                    <p class="name">你的地址</p>
+                    <textarea class="data" name="address" id="address" required></textarea>
+                </fieldset>
+                <fieldset class="item">
+                    <p class="name">你的手机号</p>
+                    <input class="data" type="tel" name="phone-number" id="phone-number" required>
+                </fieldset>
+                <fieldset class="item">
+                    <p class="name">期待送达时间</p>
+                    <input class="data" type="time" name="delivery-time" id="delivery-time" required>
+                </fieldset>
+                <fieldset class="item">
+                    <p class="name">备注</p>
+                    <textarea class="data" name="remark" id="remark" required></textarea>
+                </fieldset>
+                <fieldset class="item">
+                    <p class="name">支付方式</p>
+                    <div class="choices data">
+                        <div class="choice">
+                            <input type="radio" name="payment" value="微信支付" id="wechat" checked required>
+                            <label for="wechat">微信支付</label>
+                        </div>
+                        <div class="choice">
+                            <input type="radio" name="payment" value="支付宝支付" id="alipay" required>
+                            <label for="alipay">支付宝支付</label>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="item buttonlist">
+                    <button type="submit" class="btn primary">提交</button>
+                    <button type="reset" class="btn">重置</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <div id="back-to-top" class="disabled">
+        <img src="img/upward-arrow.png" alt="返回顶部">
+    </div>
+    <script src="js/order.js"></script>
+    <script src="js/back-to-top.js"></script>
+</body>
+</html>
