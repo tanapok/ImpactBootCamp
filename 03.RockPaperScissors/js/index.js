@@ -112,7 +112,7 @@ function processGame(player_gesture_key) {
     updatePlayerGesture(GESTURE[player_gesture_key]);
     // 判断胜负并更新分数
     if (player_gesture_key === computer_gesture_key) {
-        updateMessageText('平局');
+        updateMessageText('本回合：平局');
     } else if (
         (player_gesture_key === 'ROCK' && computer_gesture_key === 'SCISSORS') ||
         (player_gesture_key === 'PAPER' && computer_gesture_key === 'ROCK') || 
