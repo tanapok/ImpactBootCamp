@@ -146,7 +146,9 @@ function processGame(player_gesture_key) {
             updateResultText('(≧v≦)o~~好棒，你和机器人不分伯仲！');
         }
         updateControlButtonText('再玩一次');
-            game_state = GAME_STATES.FINISHED;
+        game_state = GAME_STATES.FINISHED;
+    } else {
+        updateControlButtonText('下一回合');
     }
 }
 
