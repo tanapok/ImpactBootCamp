@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>奔跑的小车</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <div class="container">
+        <main class="content">
+            <div class="title">
+                <h1 class="title-text">奔跑的小车</h1>
+            </div>
+            <form action="" class="settings">
+                <div class="speed settings-item">
+                    <label for="speed">速度</label>
+                    <select name="speed" id="speed">
+                        <option value="1">1 档</option>
+                        <option value="2">2 档</option>
+                        <option value="3">3 档</option>
+                        <option value="5">4 档</option>
+                        <option value="7">5 档</option>
+                        <option value="10">6 档</option>
+                        <option value="13">7 档</option>
+                        <option value="17">8 档</option>
+                        <option value="21">9 档</option>
+                        <option value="26">10 档</option>
+                    </select>
+                </div>
+                <div class="model settings-item">
+                    <label for="model">型号</label>
+                    <select name="model" id="model">
+                        <option value="bicycle">自行车</option>
+                        <option value="car">汽车</option>
+                        <option value="jeep">吉普车</option>
+                        <option value="minibus">面包车</option>
+                        <option value="tractor">拖拉机</option>
+                        <option value="taxi">出租车</option>
+                        <option value="fire">消防车</option>
+                        <option value="ambulance">救护车</option>
+                        <option value="trunk">卡车</option>
+                        <option value="big_trunk">大卡车</option>
+                        <option value="boat">快艇</option>
+                        <option value="plane">飞机</option>
+                        <option value="camel">骆驼</option>
+                    </select>
+                </div>
+            </form>
+            <div class="map" id="map">
+                <img src="img/question_mark.png" alt="车" class="car" id="car_img">
+            </div>
+        </main>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
