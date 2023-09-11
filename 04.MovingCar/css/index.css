@@ -34,7 +34,7 @@
 .title-text {
     font-weight: 600;
     /* 棕色渐变色，从上到下，由浅棕到深棕 */
-    background: linear-gradient(to bottom, #ffd077, #a0522d);
+    background: linear-gradient(to bottom, #D5AD61, #A0522D);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
