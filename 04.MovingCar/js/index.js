@@ -14,9 +14,11 @@ let car = {
 // localStorage
 if (localStorage.getItem('speed')) {
     car.speed = localStorage.getItem('speed');
+    speed.value = car.speed;
 }
 if (localStorage.getItem('model')) {
     car.model = localStorage.getItem('model');
+    model.value = car.model;
 }
 if (localStorage.getItem('left')) {
     car_img.style.left = localStorage.getItem('left');
