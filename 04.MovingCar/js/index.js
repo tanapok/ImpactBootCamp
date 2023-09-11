@@ -1,9 +1,15 @@
 const car_img = document.querySelector('#car_img');
 const speed = document.querySelector('#speed');
 const model = document.querySelector('#model');
-const MAX_WIDTH = 800;
+const map = document.querySelector('#map');
+const up = document.querySelector('#up');
+const down = document.querySelector('#down');
+const left = document.querySelector('#left');
+const right = document.querySelector('#right');
+
+let max_width = map.clientWidth;
 const MIN_WIDTH = 0;
-const MAX_HEIGHT = 526;
+let max_height = map.clientHeight;
 const MIN_HEIGHT = 0;
 
 let car = {
@@ -52,19 +58,19 @@ speed.addEventListener('change', function () {
 
 // 辅助函数：判断是否超出边界
 function isOutBound(x, y) {
-    let max_height = MAX_HEIGHT - car_img.height;
-    let max_width = MAX_WIDTH - car_img.width;
+    let true_max_height = max_height - car_img.height;
+    let true_max_width = max_width - car_img.width;
     if (x < MIN_WIDTH) {
         car_img.style.left = MIN_WIDTH + 'px';
         return true;
-    } else if (x > max_width) {
-        car_img.style.left = max_width + 'px';
+    } else if (x > true_max_width) {
+        car_img.style.left = true_max_width + 'px';
         return true;
     } else if (y < MIN_HEIGHT) {
         car_img.style.top = MIN_HEIGHT + 'px';
         return true;
-    } else if (y > max_height) {
-        car_img.style.top = max_height + 'px';
+    } else if (y > true_max_height) {
+        car_img.style.top = true_max_height + 'px';
         return true;
     } else {
         return false;
@@ -105,4 +111,76 @@ document.addEventListener('keydown', function (e) {
     car_img.style.top = y + 'px';
     localStorage.setItem('left', car_img.style.left);
     localStorage.setItem('top', car_img.style.top);
+});
+
+// 监听界面尺寸变化，防止超出边界
+window.addEventListener('resize', function () {
+    // 重新计算最大宽度和最大高度
+    max_width = map.clientWidth;
+    max_height = map.clientHeight;
+    // 判断是否超出边界
+    let x = car_img.offsetLeft;
+    let y = car_img.offsetTop;
+    if (isOutBound(x, y)) {
+        // 重置位置
+        car_img.style.left = '0';
+        car_img.style.top = '0';
+        localStorage.setItem('left', car_img.style.left);
+        localStorage.setItem('top', car_img.style.top);
+    }
+});
+
+// 手机版操纵
+// 监听按钮事件
+up.addEventListener('click', function () {
+    let x = car_img.offsetLeft;
+    let y = car_img.offsetTop;
+    y -= Number(car.speed);
+    car_img.classList.remove('car-down', 'car-left', 'car-right');
+    car_img.classList.add('car-up');
+    if (isOutBound(x, y)) {
+        alert('再开就超出边界了！请谨慎驾驶！');
+        return;
+    }
+    car_img.style.top = y + 'px';
+    localStorage.setItem('top', car_img.style.top);
+});
+down.addEventListener('click', function () {
+    let x = car_img.offsetLeft;
+    let y = car_img.offsetTop;
+    y += Number(car.speed);
+    car_img.classList.remove('car-up', 'car-left', 'car-right');
+    car_img.classList.add('car-down');
+    if (isOutBound(x, y)) {
+        alert('再开就超出边界了！请谨慎驾驶！');
+        return;
+    }
+    car_img.style.top = y + 'px';
+    localStorage.setItem('top', car_img.style.top);
+});
+left.addEventListener('click', function () {
+    let x = car_img.offsetLeft;
+    let y = car_img.offsetTop;
+    x -= Number(car.speed);
+    car_img.classList.remove('car-down', 'car-up', 'car-right');
+    car_img.classList.add('car-left');
+    if (isOutBound(x, y)) {
+        alert('再开就超出边界了！请谨慎驾驶！');
+        return;
+    }
+    car_img.style.left = x + 'px';
+    localStorage.setItem('left', car_img.style.left);
+});
+right.addEventListener('click', function () {
+    let x = car_img.offsetLeft;
+    let y = car_img.offsetTop;
+    x += Number(car.speed);
+    car_img.classList.remove('car-down', 'car-left', 'car-up');
+    car_img.classList.add('car-right');
+    if (isOutBound(x, y)) {
+        alert('再开就超出边界了！请谨慎驾驶！');
+        return;
+    }
+    car_img.style.left = x + 'px';
+    localStorage.setItem('left', car_img.style.left);
 });
